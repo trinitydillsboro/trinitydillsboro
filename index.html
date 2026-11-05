@@ -386,6 +386,9 @@ mark.blank {
 .svc-name { font-weight: 700; }
 .svc-order { color: var(--muted); }
 .svc-order a { color: inherit; }
+.svc-readings { font-size: 0.92rem; color: var(--muted); }
+.read-link { white-space: nowrap; }
+.next-readings { font-size: 0.95rem; color: var(--muted); }
 .chip.none { background: transparent; box-shadow: none; }
 .news { display: grid; gap: 1rem; max-width: 38rem; }
 .news-item {
@@ -486,6 +489,7 @@ mark.blank {
           <p class="next-date" data-next="date">Sunday, November 8</p>
           <p class="next-name" data-next="name">Twenty-fourth Sunday after Pentecost</p>
           <p class="next-order" data-next="order">Divine Service, with the Lord's Supper</p>
+          <p class="next-readings" data-next="readings">Readings: Amos 5:18–24; 1 Thessalonians 4:13–18; Matthew 25:1–13</p>
         </div>
         <p class="rotation">We pray Matins on the first, third, and fifth Sundays and celebrate the Divine Service with the Lord's Supper on the second and fourth Sundays and on festival days.</p>
       </aside>
@@ -605,7 +609,7 @@ mark.blank {
             <li class="svc" data-date="2026-11-08" data-sunday="yes">
               <span class="chip green" role="img" aria-label="Green" title="Green"></span>
               <span class="svc-when"><span class="svc-date">Sun., Nov. 8</span><span class="svc-time">10:00 a.m.</span></span>
-              <span class="svc-what"><span class="svc-name">Twenty-fourth Sunday after Pentecost</span><span class="svc-order">Divine Service, with the Lord's Supper</span></span>
+              <span class="svc-what"><span class="svc-name">Twenty-fourth Sunday after Pentecost</span><span class="svc-order">Divine Service, with the Lord's Supper</span><span class="svc-readings">Readings: <span class="readings-list">Amos 5:18–24; 1 Thessalonians 4:13–18; Matthew 25:1–13</span> · <a class="read-link" href="https://www.biblegateway.com/passage/?search=Amos%205%3A18-24%3B1%20Thessalonians%204%3A13-18%3BMatthew%2025%3A1-13&amp;version=ESV">Read in the ESV</a></span></span>
             </li>
             <li class="svc event" data-date="2026-11-08">
               <span class="chip none" aria-hidden="true"></span>
@@ -615,7 +619,7 @@ mark.blank {
             <li class="svc" data-date="2026-11-15" data-sunday="yes">
               <span class="chip green" role="img" aria-label="Green" title="Green"></span>
               <span class="svc-when"><span class="svc-date">Sun., Nov. 15</span><span class="svc-time">10:00 a.m.</span></span>
-              <span class="svc-what"><span class="svc-name">Twenty-fifth Sunday after Pentecost</span><span class="svc-order">Matins</span></span>
+              <span class="svc-what"><span class="svc-name">Twenty-fifth Sunday after Pentecost</span><span class="svc-order">Matins</span><span class="svc-readings">Readings: <span class="readings-list">Zephaniah 1:7–16; 1 Thessalonians 5:1–11; Matthew 25:14–30</span> · <a class="read-link" href="https://www.biblegateway.com/passage/?search=Zephaniah%201%3A7-16%3B1%20Thessalonians%205%3A1-11%3BMatthew%2025%3A14-30&amp;version=ESV">Read in the ESV</a></span></span>
             </li>
             <li class="svc event" data-date="2026-11-15">
               <span class="chip none" aria-hidden="true"></span>
@@ -625,7 +629,7 @@ mark.blank {
             <li class="svc" data-date="2026-11-22" data-sunday="yes">
               <span class="chip green" role="img" aria-label="Green" title="Green"></span>
               <span class="svc-when"><span class="svc-date">Sun., Nov. 22</span><span class="svc-time">10:00 a.m.</span></span>
-              <span class="svc-what"><span class="svc-name">Last Sunday of the Church Year</span><span class="svc-order">Divine Service, with the Lord's Supper</span></span>
+              <span class="svc-what"><span class="svc-name">Last Sunday of the Church Year</span><span class="svc-order">Divine Service, with the Lord's Supper</span><span class="svc-readings">Readings: <span class="readings-list">Ezekiel 34:11–16, 20–24; 1 Corinthians 15:20–28; Matthew 25:31–46</span> · <a class="read-link" href="https://www.biblegateway.com/passage/?search=Ezekiel%2034%3A11-16%2C20-24%3B1%20Corinthians%2015%3A20-28%3BMatthew%2025%3A31-46&amp;version=ESV">Read in the ESV</a></span></span>
             </li>
             <li class="svc event" data-date="2026-11-22">
               <span class="chip none" aria-hidden="true"></span>
@@ -640,12 +644,12 @@ mark.blank {
             <li class="svc" data-date="2026-11-25">
               <span class="chip white" role="img" aria-label="White" title="White"></span>
               <span class="svc-when"><span class="svc-date">Wed., Nov. 25</span><span class="svc-time">7:00 p.m.</span></span>
-              <span class="svc-what"><span class="svc-name">Thanksgiving Eve</span><span class="svc-order">Divine Service, with the Lord's Supper</span></span>
+              <span class="svc-what"><span class="svc-name">Thanksgiving Eve</span><span class="svc-order">Divine Service, with the Lord's Supper</span><span class="svc-readings">Readings: <span class="readings-list">Deuteronomy 8:1–10; Philippians 4:6–20; Luke 17:11–19</span> · <a class="read-link" href="https://www.biblegateway.com/passage/?search=Deuteronomy%208%3A1-10%3BPhilippians%204%3A6-20%3BLuke%2017%3A11-19&amp;version=ESV">Read in the ESV</a></span></span>
             </li>
             <li class="svc" data-date="2026-11-29" data-sunday="yes">
               <span class="chip blue" role="img" aria-label="Blue" title="Blue"></span>
               <span class="svc-when"><span class="svc-date">Sun., Nov. 29</span><span class="svc-time">10:00 a.m.</span></span>
-              <span class="svc-what"><span class="svc-name">First Sunday in Advent</span><span class="svc-order">Matins</span></span>
+              <span class="svc-what"><span class="svc-name">First Sunday in Advent</span><span class="svc-order">Matins</span><span class="svc-readings">Readings: <span class="readings-list">Isaiah 64:1–9; 1 Corinthians 1:3–9; Mark 11:1–10</span> · <a class="read-link" href="https://www.biblegateway.com/passage/?search=Isaiah%2064%3A1-9%3B1%20Corinthians%201%3A3-9%3BMark%2011%3A1-10&amp;version=ESV">Read in the ESV</a></span></span>
             </li>
           </ul>
         </div>
@@ -656,12 +660,12 @@ mark.blank {
             <li class="svc" data-date="2026-12-02">
               <span class="chip blue" role="img" aria-label="Blue" title="Blue"></span>
               <span class="svc-when"><span class="svc-date">Wed., Dec. 2</span><span class="svc-time">7:00 p.m.</span></span>
-              <span class="svc-what"><span class="svc-name">Advent Midweek: Faith</span><span class="svc-order">Evening Prayer</span></span>
+              <span class="svc-what"><span class="svc-name">Advent Midweek: Faith</span><span class="svc-order">Evening Prayer</span><span class="svc-readings">Readings: <span class="readings-list">Habakkuk 2:1–4; Hebrews 10:35–39; Luke 1:39–45</span> · <a class="read-link" href="https://www.biblegateway.com/passage/?search=Habakkuk%202%3A1-4%3BHebrews%2010%3A35-39%3BLuke%201%3A39-45&amp;version=ESV">Read in the ESV</a></span></span>
             </li>
             <li class="svc" data-date="2026-12-06" data-sunday="yes">
               <span class="chip blue" role="img" aria-label="Blue" title="Blue"></span>
               <span class="svc-when"><span class="svc-date">Sun., Dec. 6</span><span class="svc-time">10:00 a.m.</span></span>
-              <span class="svc-what"><span class="svc-name">Second Sunday in Advent</span><span class="svc-order">Matins</span></span>
+              <span class="svc-what"><span class="svc-name">Second Sunday in Advent</span><span class="svc-order">Matins</span><span class="svc-readings">Readings: <span class="readings-list">Isaiah 40:1–11; 2 Peter 3:8–14; Mark 1:1–8</span> · <a class="read-link" href="https://www.biblegateway.com/passage/?search=Isaiah%2040%3A1-11%3B2%20Peter%203%3A8-14%3BMark%201%3A1-8&amp;version=ESV">Read in the ESV</a></span></span>
             </li>
             <li class="svc" data-date="2026-12-09">
               <span class="chip blue" role="img" aria-label="Blue" title="Blue"></span>
@@ -671,12 +675,12 @@ mark.blank {
             <li class="svc" data-date="2026-12-13" data-sunday="yes">
               <span class="chip blue" role="img" aria-label="Blue" title="Blue"></span>
               <span class="svc-when"><span class="svc-date">Sun., Dec. 13</span><span class="svc-time">10:00 a.m.</span></span>
-              <span class="svc-what"><span class="svc-name">Third Sunday in Advent</span><span class="svc-order">Divine Service, with the Lord's Supper</span></span>
+              <span class="svc-what"><span class="svc-name">Third Sunday in Advent</span><span class="svc-order">Divine Service, with the Lord's Supper</span><span class="svc-readings">Readings: <span class="readings-list">Isaiah 61:1–4, 8–11; 1 Thessalonians 5:16–24; John 1:6–8, 19–28</span> · <a class="read-link" href="https://www.biblegateway.com/passage/?search=Isaiah%2061%3A1-4%2C8-11%3B1%20Thessalonians%205%3A16-24%3BJohn%201%3A6-8%2C19-28&amp;version=ESV">Read in the ESV</a></span></span>
             </li>
             <li class="svc" data-date="2026-12-16">
               <span class="chip blue" role="img" aria-label="Blue" title="Blue"></span>
               <span class="svc-when"><span class="svc-date">Wed., Dec. 16</span><span class="svc-time">7:00 p.m.</span></span>
-              <span class="svc-what"><span class="svc-name">Advent Midweek: Love</span><span class="svc-order">Evening Prayer</span></span>
+              <span class="svc-what"><span class="svc-name">Advent Midweek: Love</span><span class="svc-order">Evening Prayer</span><span class="svc-readings">Readings: <span class="readings-list">Zephaniah 3:14–17; 1 Corinthians 13:1–13; John 3:16–21</span> · <a class="read-link" href="https://www.biblegateway.com/passage/?search=Zephaniah%203%3A14-17%3B1%20Corinthians%2013%3A1-13%3BJohn%203%3A16-21&amp;version=ESV">Read in the ESV</a></span></span>
             </li>
             <li class="svc" data-date="2026-12-20" data-sunday="yes">
               <span class="chip blue" role="img" aria-label="Blue" title="Blue"></span>
@@ -686,22 +690,22 @@ mark.blank {
             <li class="svc" data-date="2026-12-24">
               <span class="chip white" role="img" aria-label="White" title="White"></span>
               <span class="svc-when"><span class="svc-date">Thu., Dec. 24</span><span class="svc-time">7:00 p.m.</span></span>
-              <span class="svc-what"><span class="svc-name">Christmas Eve</span><span class="svc-order">Divine Service, with the Lord's Supper and “Silent Night” by candlelight</span></span>
+              <span class="svc-what"><span class="svc-name">Christmas Eve</span><span class="svc-order">Divine Service, with the Lord's Supper and “Silent Night” by candlelight</span><span class="svc-readings">Readings: <span class="readings-list">Isaiah 7:10–14; 1 John 4:7–16; Matthew 1:18–25</span> · <a class="read-link" href="https://www.biblegateway.com/passage/?search=Isaiah%207%3A10-14%3B1%20John%204%3A7-16%3BMatthew%201%3A18-25&amp;version=ESV">Read in the ESV</a></span></span>
             </li>
             <li class="svc" data-date="2026-12-25">
               <span class="chip white" role="img" aria-label="White" title="White"></span>
               <span class="svc-when"><span class="svc-date">Fri., Dec. 25</span><span class="svc-time">10:00 a.m.</span></span>
-              <span class="svc-what"><span class="svc-name">Christmas Day</span><span class="svc-order">Divine Service, with the Lord's Supper</span></span>
+              <span class="svc-what"><span class="svc-name">Christmas Day</span><span class="svc-order">Divine Service, with the Lord's Supper</span><span class="svc-readings">Readings: <span class="readings-list">Isaiah 52:7–10; Hebrews 1:1–12; John 1:1–18</span> · <a class="read-link" href="https://www.biblegateway.com/passage/?search=Isaiah%2052%3A7-10%3BHebrews%201%3A1-12%3BJohn%201%3A1-18&amp;version=ESV">Read in the ESV</a></span></span>
             </li>
             <li class="svc" data-date="2026-12-27" data-sunday="yes">
               <span class="chip white" role="img" aria-label="White" title="White"></span>
               <span class="svc-when"><span class="svc-date">Sun., Dec. 27</span><span class="svc-time">10:00 a.m.</span></span>
-              <span class="svc-what"><span class="svc-name">First Sunday after Christmas</span><span class="svc-order">Divine Service, with the Lord's Supper</span></span>
+              <span class="svc-what"><span class="svc-name">First Sunday after Christmas</span><span class="svc-order">Divine Service, with the Lord's Supper</span><span class="svc-readings">Readings: <span class="readings-list">Isaiah 61:10–62:3; Galatians 4:4–7; Luke 2:22–40</span> · <a class="read-link" href="https://www.biblegateway.com/passage/?search=Isaiah%2061%3A10-62%3A3%3BGalatians%204%3A4-7%3BLuke%202%3A22-40&amp;version=ESV">Read in the ESV</a></span></span>
             </li>
             <li class="svc" data-date="2026-12-31">
               <span class="chip white" role="img" aria-label="White" title="White"></span>
               <span class="svc-when"><span class="svc-date">Thu., Dec. 31</span><span class="svc-time">7:00 p.m.</span></span>
-              <span class="svc-what"><span class="svc-name">New Year's Eve</span><span class="svc-order">Divine Service, with the Lord's Supper</span></span>
+              <span class="svc-what"><span class="svc-name">New Year's Eve</span><span class="svc-order">Divine Service, with the Lord's Supper</span><span class="svc-readings">Readings: <span class="readings-list">Isaiah 30:15–17; Romans 8:31b–39; Luke 12:35–40</span> · <a class="read-link" href="https://www.biblegateway.com/passage/?search=Isaiah%2030%3A15-17%3BRomans%208%3A31-39%3BLuke%2012%3A35-40&amp;version=ESV">Read in the ESV</a></span></span>
             </li>
           </ul>
         </div>
@@ -806,6 +810,12 @@ mark.blank {
     date.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" });
   card.querySelector('[data-next="name"]').textContent = next.querySelector(".svc-name").textContent;
   card.querySelector('[data-next="order"]').textContent = next.querySelector(".svc-order").textContent;
+  var list = next.querySelector(".readings-list");
+  var readingsLine = card.querySelector('[data-next="readings"]');
+  if (readingsLine) {
+    readingsLine.hidden = !list;
+    if (list) readingsLine.textContent = "Readings: " + list.textContent;
+  }
 })();
 </script>
 </body>
