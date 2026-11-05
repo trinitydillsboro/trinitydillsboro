@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Trinity Lutheran Church, Dillsboro</title>
 <meta name="description" content="Trinity Evangelical Lutheran Church in Dillsboro, Indiana, a congregation of the Lutheran Church—Missouri Synod. Bible Class at 9:00 a.m. and worship at 10:00 a.m. every Sunday.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#FBFAF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161412" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Trinity Evangelical Lutheran Church">
+<meta property="og:title" content="Trinity Lutheran Church, Dillsboro, Indiana">
+<meta property="og:description" content="A congregation of the Lutheran Church—Missouri Synod. Bible Class at 9:00 a.m. and worship at 10:00 a.m. every Sunday.">
+<meta property="og:image" content="https://trinitydillsboro.github.io/trinitydillsboro/share-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Trinity Evangelical Lutheran Church, Dillsboro, Indiana. Sundays: Bible Class 9:00 a.m., Worship 10:00 a.m.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap">
@@ -31,6 +45,11 @@
   --lit-blue: #2B4D88;
   --lit-gold: #C8A02A;
   --lit-black: #141414;
+  --advent-bg: #1F3A6B;
+  --advent-ink: #F7F5F0;
+  --advent-muted: #C9D3E6;
+  --advent-accent: #E9C46A;
+  --advent-rule: rgba(255, 255, 255, 0.2);
   --font-display: "Libre Caslon Text", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif;
 }
@@ -406,6 +425,74 @@ mark.blank {
   .svc-what { grid-column: 2; }
 }
 
+/* Advent and Christmas band */
+.spotlight { background: var(--advent-bg); color: var(--advent-ink); }
+.spotlight .wrap {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: clamp(2rem, 5vw, 3rem);
+}
+@media (min-width: 860px) {
+  .spotlight .wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 3rem; align-items: start; }
+}
+.spot-head { display: grid; gap: 0.6rem; min-width: 0; }
+.spotlight .eyebrow { color: var(--advent-accent); }
+.spot-verse {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.45;
+  color: var(--advent-muted);
+}
+.spot-verse cite {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--advent-accent);
+  white-space: nowrap;
+}
+.spot-list { list-style: none; padding: 0; min-width: 0; }
+.spot-list li {
+  display: grid;
+  gap: 0.1rem;
+  padding-block: 0.7rem;
+  border-top: 1px solid var(--advent-rule);
+}
+.spot-list li:last-child { border-bottom: 1px solid var(--advent-rule); }
+.spot-when { font-size: 0.95rem; color: var(--advent-muted); font-variant-numeric: tabular-nums; }
+.spot-what { font-weight: 700; }
+
+/* Map */
+.map {
+  aspect-ratio: 4 / 3;
+  max-width: 100%;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--paper);
+}
+.map iframe { display: block; width: 100%; height: 100%; border: 0; }
+
+/* History */
+.timeline { list-style: none; padding: 0; max-width: 40rem; border-top: 1px solid var(--rule); }
+.timeline li {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: baseline;
+  padding-block: 0.8rem;
+  border-bottom: 1px solid var(--rule);
+}
+.timeline .year {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--rubric);
+  font-variant-numeric: tabular-nums;
+}
+
 /* Contact */
 .details {
   display: grid;
@@ -496,6 +583,23 @@ mark.blank {
     </div>
   </section>
 
+  <section class="spotlight" id="christmas" aria-labelledby="christmas-title">
+    <div class="wrap">
+      <div class="spot-head">
+        <p class="eyebrow">Advent and Christmas</p>
+        <h2 id="christmas-title">Christmas at Trinity</h2>
+        <p class="spot-verse">“For to us a child is born, to us a son is given” <cite>Isaiah 9:6 (ESV)</cite></p>
+      </div>
+      <ul class="spot-list">
+        <li data-date="2026-12-16"><span class="spot-when">Wednesdays, December 2, 9, and 16 · 7:00 p.m.</span><span class="spot-what">Advent Evening Prayer</span></li>
+        <li data-date="2026-12-20"><span class="spot-when">Sunday, December 20 · 10:00 a.m.</span><span class="spot-what">Children's Christmas Program</span></li>
+        <li data-date="2026-12-24"><span class="spot-when">Thursday, December 24 · 7:00 p.m.</span><span class="spot-what">Christmas Eve, with “Silent Night” by candlelight</span></li>
+        <li data-date="2026-12-25"><span class="spot-when">Friday, December 25 · 10:00 a.m.</span><span class="spot-what">Christmas Day</span></li>
+        <li data-date="2026-12-31"><span class="spot-when">Thursday, December 31 · 7:00 p.m.</span><span class="spot-what">New Year's Eve</span></li>
+      </ul>
+    </div>
+  </section>
+
   <section class="section" id="visit" aria-labelledby="visit-title">
     <div class="wrap">
       <div class="section-head">
@@ -527,6 +631,9 @@ mark.blank {
           <h3 id="getting-here">Getting here</h3>
           <p>Trinity is at 9901 Central Avenue in Dillsboro, Indiana.</p>
           <p>Parking is available on all sides of the building, and the accessible entrances are on the south and east sides.</p>
+          <div class="map">
+            <iframe title="Map showing Trinity Lutheran Church at 9901 Central Avenue, Dillsboro" src="https://maps.google.com/maps?q=Trinity%20Lutheran%20Church%2C%209901%20Central%20Ave%2C%20Dillsboro%2C%20IN%2047018&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
           <div class="actions">
             <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Trinity%20Lutheran%20Church%2C%20Central%20Avenue%2C%20Dillsboro%2C%20IN%2047018">Get Directions</a>
           </div>
@@ -553,6 +660,26 @@ mark.blank {
           <a class="btn" href="https://www.lcms.org">Learn more at lcms.org</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section" id="history" aria-labelledby="history-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">History</p>
+        <h2 id="history-title">Our History</h2>
+        <p class="note">From Trinity's early records.</p>
+      </div>
+      <ol class="timeline">
+        <li><span class="year">1902</span><p>Pastor F. W. Mueller of Farmers Retreat and Pastor R. Eirich of Aurora began holding preaching services in Dillsboro.</p></li>
+        <li><span class="year">1903</span><p>The congregation was organized on January 27, with the Rev. C. W. Baer as its first pastor. A parochial school opened during his years here, 1903 to 1906.</p></li>
+        <li><span class="year">1908</span><p>The Ladies' Aid was organized on June 14.</p></li>
+        <li><span class="year">1909</span><p>The church, built for $3,000, was dedicated on December 5.</p></li>
+        <li><span class="year">1910</span><p>The school building was dedicated on December 18.</p></li>
+        <li><span class="year">1916</span><p>Trinity joined the Missouri Synod on April 2, and its young people's society later joined the Walther League.</p></li>
+        <li><span class="year">1926</span><p>The Sunday School was organized on May 16.</p></li>
+        <li><span class="year">1928</span><p>The men's club was formed on March 15.</p></li>
+      </ol>
     </div>
   </section>
 
@@ -790,6 +917,14 @@ mark.blank {
   });
   var news = document.querySelector(".news");
   if (news) news.hidden = !news.querySelector(".news-item:not([hidden])");
+
+  var spot = document.getElementById("christmas");
+  if (spot) {
+    Array.prototype.forEach.call(spot.querySelectorAll("li[data-date]"), function (li) {
+      if (new Date(li.getAttribute("data-date") + "T00:00:00") < today) li.hidden = true;
+    });
+    spot.hidden = !spot.querySelector("li[data-date]:not([hidden])");
+  }
 
   var empty = document.getElementById("svc-empty");
   if (empty) empty.hidden = upcoming > 0;
