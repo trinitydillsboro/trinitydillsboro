@@ -493,6 +493,30 @@ mark.blank {
   font-variant-numeric: tabular-nums;
 }
 
+/* Icons (Lucide line icons, drawn thin) */
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+.icon {
+  width: 1.15em;
+  height: 1.15em;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.eyebrow { display: flex; align-items: center; gap: 0.5rem; }
+.eyebrow .icon { width: 1.35em; height: 1.35em; }
+.btn .icon { width: 1.1em; height: 1.1em; }
+.part h3, .news-item h3 { display: flex; align-items: center; gap: 0.5rem; }
+.part h3 .icon, .news-item h3 .icon { color: var(--rubric); }
+.details dt { display: flex; align-items: center; gap: 0.45rem; }
+.details dt .icon { width: 1.35em; height: 1.35em; }
+.icon-list { list-style: none; padding: 0; display: grid; gap: 0.7rem; }
+.icon-list li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0.65rem; align-items: start; }
+.icon-list .icon { color: var(--rubric); margin-top: 0.2em; }
+.svc .event-icon { width: 1.05rem; height: 1.05rem; color: var(--muted); align-self: center; }
+
 /* Contact */
 .details {
   display: grid;
@@ -523,6 +547,33 @@ mark.blank {
 </style>
 </head>
 <body>
+<!-- Icons from Lucide (lucide.dev), ISC License, Copyright (c) Lucide Contributors -->
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /></symbol>
+<symbol id="i-calendar-days" viewBox="0 0 24 24"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /><path d="M8 14h.01" /><path d="M12 14h.01" /><path d="M16 14h.01" /><path d="M8 18h.01" /><path d="M12 18h.01" /><path d="M16 18h.01" /></symbol>
+<symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></symbol>
+<symbol id="i-navigation" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11" /></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3" /></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></symbol>
+<symbol id="i-door-open" viewBox="0 0 24 24"><path d="M13 4h3a2 2 0 0 1 2 2v14" /><path d="M2 20h3" /><path d="M13 20h9" /><path d="M10 12v.01" /><path d="M13 4.562v16.157a1 1 0 0 1-1.242.97L5 20V5.562a2 2 0 0 1 1.515-1.94l4-1A2 2 0 0 1 13 4.561Z" /></symbol>
+<symbol id="i-square-parking" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" /><path d="M9 17V7h4a3 3 0 0 1 0 6H9" /></symbol>
+<symbol id="i-church" viewBox="0 0 24 24"><path d="M10 9h4" /><path d="M12 7v5" /><path d="M14 22v-4a2 2 0 0 0-4 0v4" /><path d="M18 22V5.618a1 1 0 0 0-.553-.894l-4.553-2.277a2 2 0 0 0-1.788 0L6.553 4.724A1 1 0 0 0 6 5.618V22" /><path d="m18 7 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.618a1 1 0 0 1 .553-.894L6 7" /></symbol>
+<symbol id="i-book-open" viewBox="0 0 24 24"><path d="M12 7v14" /><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></symbol>
+<symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></symbol>
+<symbol id="i-monitor-play" viewBox="0 0 24 24"><path d="M10 7.75a.75.75 0 0 1 1.142-.638l3.664 2.249a.75.75 0 0 1 0 1.278l-3.664 2.25a.75.75 0 0 1-1.142-.64z" /><path d="M12 17v4" /><path d="M8 21h8" /><rect x="2" y="3" width="20" height="14" rx="2" /></symbol>
+<symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" /><rect x="2" y="6" width="14" height="12" rx="2" /></symbol>
+<symbol id="i-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path d="M3 3v5h5" /><path d="M12 7v5l4 2" /></symbol>
+<symbol id="i-house" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></symbol>
+<symbol id="i-radio" viewBox="0 0 24 24"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9" /><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" /><circle cx="12" cy="12" r="2" /><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5" /><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19" /></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" /><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" /></symbol>
+<symbol id="i-shopping-basket" viewBox="0 0 24 24"><path d="m15 11-1 9" /><path d="m19 11-4-7" /><path d="M2 11h20" /><path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4" /><path d="M4.5 15.5h15" /><path d="m5 11 4-7" /><path d="m9 11 1 9" /></symbol>
+<symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" /><path d="M7 2v20" /><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" /></symbol>
+<symbol id="i-tree-pine" viewBox="0 0 24 24"><path d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z" /><path d="M12 22v-3" /></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></symbol>
+<symbol id="i-mailbox" viewBox="0 0 24 24"><path d="M22 17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.5C2 7 4 5 6.5 5H18c2.2 0 4 1.8 4 4v8Z" /><polyline points="15,9 18,9 18,11" /><path d="M6.5 5C9 5 11 7 11 9.5V17a2 2 0 0 1-2 2" /><line x1="6" x2="7" y1="10" y2="10" /></symbol>
+</svg>
 <a class="skip" href="#main">Skip to main content</a>
 
 <div class="draft" role="note">
@@ -558,13 +609,13 @@ mark.blank {
         <p class="lede">Every Sunday we gather to hear God's Word and to receive His gifts of forgiveness and life, and we would be glad to have you with us.</p>
         <div class="actions">
           <a class="btn btn-primary" href="#visit">Plan a Visit</a>
-          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Trinity%20Lutheran%20Church%2C%20Central%20Avenue%2C%20Dillsboro%2C%20IN%2047018">Get Directions</a>
-          <a class="btn" href="#watch">Watch Online</a>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Trinity%20Lutheran%20Church%2C%20Central%20Avenue%2C%20Dillsboro%2C%20IN%2047018"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-navigation"/></svg>Get Directions</a>
+          <a class="btn" href="#watch"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-play"/></svg>Watch Online</a>
         </div>
       </div>
 
       <aside class="times" aria-label="Sunday schedule">
-        <p class="eyebrow">Every Sunday</p>
+        <p class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg>Every Sunday</p>
         <dl>
           <dt>9:00 a.m.</dt>
           <dd>Bible Class and Sunday School</dd>
@@ -572,7 +623,7 @@ mark.blank {
           <dd>Worship</dd>
         </dl>
         <div class="next" id="next-sunday">
-          <p class="eyebrow" data-next="label">Next Sunday</p>
+          <p class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg><span data-next="label">Next Sunday</span></p>
           <p class="next-date" data-next="date">Sunday, November 8</p>
           <p class="next-name" data-next="name">Twenty-fourth Sunday after Pentecost</p>
           <p class="next-order" data-next="order">Divine Service, with the Lord's Supper</p>
@@ -586,7 +637,7 @@ mark.blank {
   <section class="spotlight" id="christmas" aria-labelledby="christmas-title">
     <div class="wrap">
       <div class="spot-head">
-        <p class="eyebrow">Advent and Christmas</p>
+        <p class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg>Advent and Christmas</p>
         <h2 id="christmas-title">Christmas at Trinity</h2>
         <p class="spot-verse">“For to us a child is born, to us a son is given” <cite>Isaiah 9:6 (ESV)</cite></p>
       </div>
@@ -603,7 +654,7 @@ mark.blank {
   <section class="section" id="visit" aria-labelledby="visit-title">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Visit</p>
+        <p class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-church"/></svg>Visit</p>
         <h2 id="visit-title">Plan a Visit</h2>
       </div>
       <div class="split">
@@ -629,13 +680,16 @@ mark.blank {
 
         <aside class="aside" aria-labelledby="getting-here">
           <h3 id="getting-here">Getting here</h3>
-          <p>Trinity is at 9901 Central Avenue in Dillsboro, Indiana.</p>
-          <p>Parking is available on all sides of the building. For anyone using a wheelchair or walker, the entrances on the south and east sides are accessible.</p>
+          <ul class="icon-list">
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-map-pin"/></svg><span>Trinity is at 9901 Central Avenue in Dillsboro, Indiana.</span></li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-square-parking"/></svg><span>Parking is available on all sides of the building.</span></li>
+            <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-door-open"/></svg><span>For anyone using a wheelchair or walker, the entrances on the south and east sides are accessible.</span></li>
+          </ul>
           <div class="map">
             <iframe title="Map showing Trinity Lutheran Church at 9901 Central Avenue, Dillsboro" src="https://maps.google.com/maps?q=Trinity%20Lutheran%20Church%2C%209901%20Central%20Ave%2C%20Dillsboro%2C%20IN%2047018&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="actions">
-            <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Trinity%20Lutheran%20Church%2C%20Central%20Avenue%2C%20Dillsboro%2C%20IN%2047018">Get Directions</a>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Trinity%20Lutheran%20Church%2C%20Central%20Avenue%2C%20Dillsboro%2C%20IN%2047018"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-navigation"/></svg>Get Directions</a>
           </div>
         </aside>
       </div>
@@ -645,7 +699,7 @@ mark.blank {
   <section class="section" id="beliefs" aria-labelledby="beliefs-title">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Beliefs</p>
+        <p class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-book-open"/></svg>Beliefs</p>
         <h2 id="beliefs-title">What We Believe</h2>
       </div>
       <div class="prose">
@@ -657,7 +711,7 @@ mark.blank {
         </blockquote>
         <p>God gives this forgiveness through the means He has chosen: the preaching of His Word, Holy Baptism, and the Lord's Supper. In Baptism He washes us and makes us His children, and in the Supper He feeds us with the true body and blood of His Son. That is why we gather every Sunday: to hear Him speak and to receive what He gives.</p>
         <div class="actions">
-          <a class="btn" href="https://www.lcms.org">Learn more at lcms.org</a>
+          <a class="btn" href="https://www.lcms.org">Learn more at lcms.org<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></a>
         </div>
       </div>
     </div>
@@ -666,21 +720,21 @@ mark.blank {
   <section class="section" id="watch" aria-labelledby="watch-title">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Watch</p>
+        <p class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-monitor-play"/></svg>Watch</p>
         <h2 id="watch-title">Watch Online</h2>
       </div>
       <div class="prose">
         <p>Sunday services are streamed live on Trinity's Facebook page, and each service is posted afterward on our YouTube channel.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="https://www.facebook.com/@trinitydillsboro">Watch Live on Facebook</a>
-          <a class="btn" href="https://www.youtube.com/@dillsborotrinitylutheran2778">Past Services on YouTube</a>
+          <a class="btn btn-primary" href="https://www.facebook.com/@trinitydillsboro"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-video"/></svg>Watch Live on Facebook</a>
+          <a class="btn" href="https://www.youtube.com/@dillsborotrinitylutheran2778"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-history"/></svg>Past Services on YouTube</a>
         </div>
         <div class="part">
-          <h3>Homebound members</h3>
+          <h3><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-house"/></svg>Homebound members</h3>
           <p>If you are unable to come to church and would like a visit from Pastor Richardson or to receive the Lord's Supper at home, please call the church office at <a href="tel:+18124325406">(812) 432-5406</a>.</p>
         </div>
         <div class="part">
-          <h3>Lutheran radio</h3>
+          <h3><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-radio"/></svg>Lutheran radio</h3>
           <ul class="radio-list">
             <li><strong>The Lutheran Hour</strong>, Sundays at 7:30 a.m. on WLW 700 AM, 10:00 a.m. on SiriusXM 131, and 7:00 p.m. on WYGS 88.1 FM</li>
             <li><strong>Light from the Cross</strong>, Sundays at 10:30 a.m. on WKID 95.9 FM</li>
@@ -696,13 +750,13 @@ mark.blank {
   <section class="section" id="news" aria-labelledby="news-title">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Calendar</p>
+        <p class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar-days"/></svg>Calendar</p>
         <h2 id="news-title">News &amp; Events</h2>
       </div>
 
       <div class="news">
         <article class="news-item">
-          <h3>Leaf raking in Trinity's park</h3>
+          <h3><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-leaf"/></svg>Leaf raking in Trinity's park</h3>
           <p>Volunteers will be needed to rake the leaves in Trinity's park and haul them to the curb for the town to pick up. The date depends on when most of the leaves are down, so watch the bulletin and your email for it.</p>
         </article>
       </div>
@@ -719,7 +773,7 @@ mark.blank {
               <span class="svc-what"><span class="svc-name">Twenty-fourth Sunday after Pentecost</span><span class="svc-order">Divine Service, with the Lord's Supper</span><span class="svc-readings">Readings: <span class="readings-list">Amos 5:18–24; 1 Thessalonians 4:13–18; Matthew 25:1–13</span> · <a class="read-link" href="https://www.biblegateway.com/passage/?search=Amos%205%3A18-24%3B1%20Thessalonians%204%3A13-18%3BMatthew%2025%3A1-13&amp;version=ESV">Read in the ESV</a></span></span>
             </li>
             <li class="svc event" data-date="2026-11-08">
-              <span class="chip none" aria-hidden="true"></span>
+              <svg class="icon event-icon" aria-hidden="true" focusable="false"><use href="#i-shopping-basket"/></svg>
               <span class="svc-when"><span class="svc-date">Sun., Nov. 8</span><span class="svc-time">11:30 a.m.</span></span>
               <span class="svc-what"><span class="svc-name">Food Pantry grocery bagging</span><span class="svc-order">Our second and last bagging, right after the Divine Service, in the large Sunday School room beyond the double doors.</span></span>
             </li>
@@ -729,7 +783,7 @@ mark.blank {
               <span class="svc-what"><span class="svc-name">Twenty-fifth Sunday after Pentecost</span><span class="svc-order">Matins</span><span class="svc-readings">Readings: <span class="readings-list">Zephaniah 1:7–16; 1 Thessalonians 5:1–11; Matthew 25:14–30</span> · <a class="read-link" href="https://www.biblegateway.com/passage/?search=Zephaniah%201%3A7-16%3B1%20Thessalonians%205%3A1-11%3BMatthew%2025%3A14-30&amp;version=ESV">Read in the ESV</a></span></span>
             </li>
             <li class="svc event" data-date="2026-11-15">
-              <span class="chip none" aria-hidden="true"></span>
+              <svg class="icon event-icon" aria-hidden="true" focusable="false"><use href="#i-utensils"/></svg>
               <span class="svc-when"><span class="svc-date">Sun., Nov. 15</span><span class="svc-time">11:30 a.m. and 12:30 p.m.</span></span>
               <span class="svc-what"><span class="svc-name">Thanksgiving Dinner at St. John Lutheran School, Aurora</span><span class="svc-order">The school's annual fundraiser at 222 Mechanic St., by freewill donation. Reservations are appreciated: call 812-926-3337 or email <a href="mailto:Office@sjlsaurora.com">Office@sjlsaurora.com</a>.</span></span>
             </li>
@@ -739,12 +793,12 @@ mark.blank {
               <span class="svc-what"><span class="svc-name">Last Sunday of the Church Year</span><span class="svc-order">Divine Service, with the Lord's Supper</span><span class="svc-readings">Readings: <span class="readings-list">Ezekiel 34:11–16, 20–24; 1 Corinthians 15:20–28; Matthew 25:31–46</span> · <a class="read-link" href="https://www.biblegateway.com/passage/?search=Ezekiel%2034%3A11-16%2C20-24%3B1%20Corinthians%2015%3A20-28%3BMatthew%2025%3A31-46&amp;version=ESV">Read in the ESV</a></span></span>
             </li>
             <li class="svc event" data-date="2026-11-22">
-              <span class="chip none" aria-hidden="true"></span>
+              <svg class="icon event-icon" aria-hidden="true" focusable="false"><use href="#i-tree-pine"/></svg>
               <span class="svc-when"><span class="svc-date">Sun., Nov. 22</span><span class="svc-time">After worship</span></span>
               <span class="svc-what"><span class="svc-name">Decorating the church for Christmas</span><span class="svc-order">Soup and sandwiches will be available.</span></span>
             </li>
             <li class="svc event" data-date="2026-11-22">
-              <span class="chip none" aria-hidden="true"></span>
+              <svg class="icon event-icon" aria-hidden="true" focusable="false"><use href="#i-utensils"/></svg>
               <span class="svc-when"><span class="svc-date">Sun., Nov. 22</span><span class="svc-time">4:00–6:00 p.m.</span></span>
               <span class="svc-what"><span class="svc-name">Ham &amp; Turkey Supper at St. Paul's Lutheran, Dewberry</span><span class="svc-order">St. Paul's has invited us to join them, by freewill offering, at 5588 E. CR 900 South, Cross Plains.</span></span>
             </li>
@@ -824,7 +878,7 @@ mark.blank {
   <section class="section" id="contact" aria-labelledby="contact-title">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Contact</p>
+        <p class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>Contact</p>
         <h2 id="contact-title">Pastor and Office</h2>
       </div>
       <div class="split">
@@ -836,23 +890,23 @@ mark.blank {
         <aside class="aside" aria-label="Office hours and contact details">
           <dl class="details">
             <div>
-              <dt>Office hours</dt>
+              <dt><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg>Office hours</dt>
               <dd>Tuesdays and Thursdays, 9 a.m. to noon, or call to set up another time</dd>
             </div>
             <div>
-              <dt>Phone</dt>
+              <dt><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Phone</dt>
               <dd><a href="tel:+18124325406">(812) 432-5406</a></dd>
             </div>
             <div>
-              <dt>Pastor's email</dt>
+              <dt><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>Pastor's email</dt>
               <dd><a href="mailto:pastorkylerichardson@gmail.com">pastorkylerichardson@gmail.com</a></dd>
             </div>
             <div>
-              <dt>Church email</dt>
+              <dt><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>Church email</dt>
               <dd><a href="mailto:dillstrinity@yahoo.com">dillstrinity@yahoo.com</a></dd>
             </div>
             <div>
-              <dt>Mailing address</dt>
+              <dt><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mailbox"/></svg>Mailing address</dt>
               <dd>P.O. Box 578<br>Dillsboro, IN 47018</dd>
             </div>
           </dl>
