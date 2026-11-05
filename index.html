@@ -385,6 +385,18 @@ mark.blank {
 .svc-what { display: grid; min-width: 0; }
 .svc-name { font-weight: 700; }
 .svc-order { color: var(--muted); }
+.svc-order a { color: inherit; }
+.chip.none { background: transparent; box-shadow: none; }
+.news { display: grid; gap: 1rem; max-width: 38rem; }
+.news-item {
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 1.1rem 1.25rem;
+  display: grid;
+  gap: 0.35rem;
+}
+.radio-list { list-style: none; padding: 0; display: grid; gap: 0.5rem; }
 @media (max-width: 560px) {
   .svc { grid-template-columns: auto minmax(0, 1fr); }
   .svc-when { display: flex; flex-wrap: wrap; gap: 0 0.6rem; }
@@ -440,7 +452,7 @@ mark.blank {
         <li><a href="#visit">Visit</a></li>
         <li><a href="#beliefs">Beliefs</a></li>
         <li><a href="#watch">Watch</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="#news">News &amp; Events</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -556,17 +568,35 @@ mark.blank {
           <h3>Homebound members</h3>
           <p>If you are unable to come to church and would like a visit from Pastor Richardson or to receive the Lord's Supper at home, please call the church office at <a href="tel:+18124325406">(812) 432-5406</a>.</p>
         </div>
+        <div class="part">
+          <h3>Lutheran radio</h3>
+          <ul class="radio-list">
+            <li><strong>The Lutheran Hour</strong>, Sundays at 7:30 a.m. on WLW 700 AM, 10:00 a.m. on SiriusXM 131, and 7:00 p.m. on WYGS 88.1 FM</li>
+            <li><strong>Light from the Cross</strong>, Sundays at 10:30 a.m. on WKID 95.9 FM</li>
+            <li><strong>Issues, Etc.</strong>, weekdays at 4:05 p.m. at <a href="https://www.issuesetc.org">issuesetc.org</a></li>
+            <li><strong>KFUO</strong>, the official radio of the Missouri Synod, at <a href="https://www.kfuo.org">kfuo.org</a></li>
+            <li><strong>Lutheran Public Radio</strong>, sacred music around the clock, at <a href="https://www.lutheranpublicradio.org">lutheranpublicradio.org</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="services" aria-labelledby="services-title">
+  <section class="section" id="news" aria-labelledby="news-title">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Services</p>
-        <h2 id="services-title">Coming Up</h2>
-        <p class="note">The dot beside each service shows the liturgical color for that day.</p>
+        <p class="eyebrow">Calendar</p>
+        <h2 id="news-title">News &amp; Events</h2>
       </div>
+
+      <div class="news">
+        <article class="news-item">
+          <h3>Leaf raking in Trinity's park</h3>
+          <p>Volunteers will be needed to rake the leaves in Trinity's park and haul them to the curb for the town to pick up. The date depends on when most of the leaves are down, so watch the bulletin and your email for it.</p>
+        </article>
+      </div>
+
+      <p class="note">The dot beside each service shows the liturgical color for that day.</p>
 
       <div class="months">
         <div class="month">
@@ -577,15 +607,35 @@ mark.blank {
               <span class="svc-when"><span class="svc-date">Sun., Nov. 8</span><span class="svc-time">10:00 a.m.</span></span>
               <span class="svc-what"><span class="svc-name">Twenty-fourth Sunday after Pentecost</span><span class="svc-order">Divine Service, with the Lord's Supper</span></span>
             </li>
+            <li class="svc event" data-date="2026-11-08">
+              <span class="chip none" aria-hidden="true"></span>
+              <span class="svc-when"><span class="svc-date">Sun., Nov. 8</span><span class="svc-time">11:30 a.m.</span></span>
+              <span class="svc-what"><span class="svc-name">Food Pantry grocery bagging</span><span class="svc-order">Our second and last bagging, right after the Divine Service, in the large Sunday School room beyond the double doors.</span></span>
+            </li>
             <li class="svc" data-date="2026-11-15" data-sunday="yes">
               <span class="chip green" role="img" aria-label="Green" title="Green"></span>
               <span class="svc-when"><span class="svc-date">Sun., Nov. 15</span><span class="svc-time">10:00 a.m.</span></span>
               <span class="svc-what"><span class="svc-name">Twenty-fifth Sunday after Pentecost</span><span class="svc-order">Matins</span></span>
             </li>
+            <li class="svc event" data-date="2026-11-15">
+              <span class="chip none" aria-hidden="true"></span>
+              <span class="svc-when"><span class="svc-date">Sun., Nov. 15</span><span class="svc-time">11:30 a.m. and 12:30 p.m.</span></span>
+              <span class="svc-what"><span class="svc-name">Thanksgiving Dinner at St. John Lutheran School, Aurora</span><span class="svc-order">The school's annual fundraiser at 222 Mechanic St., by freewill donation. Reservations are appreciated: call 812-926-3337 or email <a href="mailto:Office@sjlsaurora.com">Office@sjlsaurora.com</a>.</span></span>
+            </li>
             <li class="svc" data-date="2026-11-22" data-sunday="yes">
               <span class="chip green" role="img" aria-label="Green" title="Green"></span>
               <span class="svc-when"><span class="svc-date">Sun., Nov. 22</span><span class="svc-time">10:00 a.m.</span></span>
               <span class="svc-what"><span class="svc-name">Last Sunday of the Church Year</span><span class="svc-order">Divine Service, with the Lord's Supper</span></span>
+            </li>
+            <li class="svc event" data-date="2026-11-22">
+              <span class="chip none" aria-hidden="true"></span>
+              <span class="svc-when"><span class="svc-date">Sun., Nov. 22</span><span class="svc-time">After worship</span></span>
+              <span class="svc-what"><span class="svc-name">Decorating the church for Christmas</span><span class="svc-order">Soup and sandwiches will be available.</span></span>
+            </li>
+            <li class="svc event" data-date="2026-11-22">
+              <span class="chip none" aria-hidden="true"></span>
+              <span class="svc-when"><span class="svc-date">Sun., Nov. 22</span><span class="svc-time">4:00–6:00 p.m.</span></span>
+              <span class="svc-what"><span class="svc-name">Ham &amp; Turkey Supper at St. Paul's Lutheran, Dewberry</span><span class="svc-order">St. Paul's has invited us to join them, by freewill offering, at 5588 E. CR 900 South, Cross Plains.</span></span>
             </li>
             <li class="svc" data-date="2026-11-25">
               <span class="chip white" role="img" aria-label="White" title="White"></span>
@@ -726,6 +776,12 @@ mark.blank {
   Array.prototype.forEach.call(document.querySelectorAll(".month"), function (m) {
     m.hidden = !m.querySelector(".svc:not([hidden])");
   });
+
+  Array.prototype.forEach.call(document.querySelectorAll(".news-item[data-date]"), function (el) {
+    if (new Date(el.getAttribute("data-date") + "T00:00:00") < today) el.hidden = true;
+  });
+  var news = document.querySelector(".news");
+  if (news) news.hidden = !news.querySelector(".news-item:not([hidden])");
 
   var empty = document.getElementById("svc-empty");
   if (empty) empty.hidden = upcoming > 0;
