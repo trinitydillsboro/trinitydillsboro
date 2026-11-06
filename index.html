@@ -517,6 +517,19 @@ mark.blank {
 .icon-list .icon { color: var(--rubric); margin-top: 0.2em; }
 .svc .event-icon { width: 1.05rem; height: 1.05rem; color: var(--muted); align-self: center; }
 
+/* Photos */
+.photo { margin: 0; display: grid; gap: 0.55rem; min-width: 0; }
+.photo picture { display: block; min-width: 0; }
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  background: var(--panel);
+}
+.photo figcaption { font-size: 0.875rem; line-height: 1.4; color: var(--muted); }
+.hero-photo { grid-column: 1 / -1; }
+
 /* Contact */
 .details {
   display: grid;
@@ -631,6 +644,13 @@ mark.blank {
         </div>
         <p class="rotation">We pray Matins on the first, third, and fifth Sundays and celebrate the Divine Service with the Lord's Supper on the second and fourth Sundays and on festival days.</p>
       </aside>
+
+      <figure class="photo hero-photo">
+        <picture>
+          <source media="(max-width: 640px)" srcset="images/sanctuary-phone-800.jpg 800w, images/sanctuary-phone-1200.jpg 1200w" sizes="calc(100vw - 32px)" width="1200" height="900">
+          <img src="images/sanctuary-1200.jpg" srcset="images/sanctuary-1200.jpg 1200w, images/sanctuary-2000.jpg 2000w" sizes="(min-width: 62rem) 960px, calc(100vw - 32px)" width="1200" height="585" decoding="async" alt="Trinity's sanctuary, with the altar and a wooden cross beneath a round stained-glass window of Christ.">
+        </picture>
+      </figure>
     </div>
   </section>
 
@@ -657,6 +677,10 @@ mark.blank {
         <p class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-church"/></svg>Visit</p>
         <h2 id="visit-title">Plan a Visit</h2>
       </div>
+      <figure class="photo">
+        <img src="images/church-outside.jpg" width="992" height="242" loading="lazy" decoding="async" alt="The outside of Trinity: a long, low stone building with a cross on each gable and a glass entrance in the middle.">
+        <figcaption>Trinity at 9901 Central Avenue</figcaption>
+      </figure>
       <div class="split">
         <div class="parts">
           <div class="part">
